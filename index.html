@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayan Art Glass - Shop Mirrors & Art Glass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.21/default/snipcart.css" />
+    <script async src="https://cdn.snipcart.com/themes/v3.0.21/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="YOUR_SNIPCART_API_KEY"></div> 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <img src="Images\logo.png" alt="Aayan Art Glass Logo" class="site-logo">
+            Aayan Art Glass
+        </h1>
+        <p>Your premier destination for stylish mirrors and exquisite art glass</p>
+    </header>
+
+    <nav>
+        <a href="#home"><i class="fas fa-home"></i> Home</a>
+        <a href="#products"><i class="fas fa-store"></i> Products</a>
+        <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Search mirrors or glass styles...">
+            <i class="fas fa-search search-icon"></i>
+            <div id="searchList" class="search-list"></div>
+        </div>
+        <button class="wishlist-btn" onclick="location.href='wishlist.html'">
+        <i class="fas fa-bookmark"></i>
+        Saved <span class="wishlist-count">0</span>
+    </button>
+    </nav>
+    
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="slide-in">Reflect Beauty with Art Glass</h2>
+            <p>Discover high-quality mirrors and art glass pieces for every room. Shop our unique collection today!</p><br>
+            <a href="#products" class="cta-btn">Explore Products</a>
+        </div>
+    </section>
+
+
+<section id="products"><br><br>
+    <h2>Our Mirrors & Art Glass</h2>
+
+    <div class="products">
+
+        <!-- LED MIRROR -->
+        <div class="product" data-name="LED Mirror" data-image="images/led-mirror.jpg" data-link="led-mirror.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>LED Mirror</h3>
+            <p>Modern LED-lit mirrors</p>
+            <a href="led-mirror.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- DESIGNER MIRROR -->
+        <div class="product" data-name="Designer Mirror" data-image="images/designer-mirror.jpg" data-link="designer-mirror.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Designer Mirror</h3>
+            <p>Elegant designer mirrors</p>
+            <a href="designer-mirror.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- PROFILE MIRROR -->
+        <div class="product" data-name="Profile Mirror" data-image="images/profile-mirror.jpg" data-link="profile-mirror.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Profile Mirror</h3>
+            <p>Slim profile mirrors</p>
+            <a href="profile-mirror.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- STANDING MIRROR -->
+        <div class="product" data-name="Standing Mirror" data-image="images/standing-mirror.jpg" data-link="standing-mirror.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Standing Mirror</h3>
+            <p>Full length standing mirrors</p>
+            <a href="standing-mirror.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- LED MOTION MIRROR -->
+        <div class="product" data-name="LED Motion Mirror" data-image="images/led-motion.jpg" data-link="led-motion-mirror.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>LED Motion Mirror</h3>
+            <p>Motion sensor LED mirrors</p>
+            <a href="led-motion-mirror.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- SHOWER GLASS -->
+        <div class="product" data-name="Shower Glass" data-image="images/shower-glass.jpg" data-link="shower-glass.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Shower Glass</h3>
+            <p>Quick-install shower glass</p>
+            <a href="shower-glass.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- FRAMING MIRROR -->
+        <div class="product" data-name="Framing Mirror" data-image="images/framing-mirror.jpg" data-link="framing-mirror.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Framing Mirror</h3>
+            <p>Decorative framed mirrors</p>
+            <a href="framing-mirror.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- DIGITAL GLASS -->
+        <div class="product" data-name="Digital Glass" data-image="images/digital-glass.jpg" data-link="digital-glass.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Digital Glass</h3>
+            <p>Custom glass designs</p>
+            <a href="digital-glass.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- DIGITAL PRINTING GLASS -->
+        <div class="product" data-name="Digital Printing Glass" data-image="images/digital-printed-glass.jpg" data-link="digital-printing-glass.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Digital Printing Glass</h3>
+            <p>Custom printed glass designs</p>
+            <a href="digital-printing-glass.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- 3D GLASS -->
+        <div class="product" data-name="3D Glass" data-image="images/3d-glass.jpg" data-link="3d-glass.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>3D Glass</h3>
+            <p>3D etched glass panels</p>
+            <a href="3d-glass.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- TOUGHENED GLASS -->
+        <div class="product" data-name="Toughened Glass" data-image="images/toughened-glass.jpg" data-link="toughened-glass.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Toughened Glass</h3>
+            <p>Durable safety glass</p>
+            <a href="toughened-glass.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- DESIGNER GLASS -->
+        <div class="product" data-name="Designer Glass" data-image="images/designer-glass.jpg" data-link="designer-glass.html">
+            <img src=Images\Jai_Shree_Krishana.jpg>
+            <h3>Designer Glass</h3>
+            <p>Artistic designer glass</p>
+            <a href="designer-glass.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- SLIM PROFILE GLASS -->
+        <div class="product" data-name="Slim Profile Glass" data-image="images/slim-profile-glass.jpg" data-link="slim-profile-glass.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Slim Profile Glass</h3>
+            <p>Ultra thin profile glass</p>
+            <a href="slim-profile-glass.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- STEAM SHOWER -->
+        <div class="product" data-name="Steam Shower" data-image="images/steam-shower.jpg" data-link="steam-shower.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Steam Shower</h3>
+            <p>Luxury steam shower glass</p>
+            <a href="steam-shower.html" class="add-btn">More Options</a>
+        </div>
+
+        <!--UPVC WINDOWS -->
+        <div class="product" data-name="UPVC Window" data-image="images/upvc-window.jpg" data-link="upvc-window.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>UPVC Window</h3>
+            <p>UPVC framed glass windows</p>
+            <a href="upvc-window.html" class="add-btn">More Options</a>
+        </div>
+
+        <!--Aluminium Window -->
+        <div class="product" data-name="Aluminium Window" data-image="images/aluminium-window.jpg" data-link="aluminium-window.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Aluminium Window</h3>
+            <p>Aluminium framed windows</p>
+            <a href="aluminium-window.html" class="add-btn">More Options</a>
+        </div>
+
+        <!-- RAILING GLASS -->
+        <div class="product" data-name="Railing Glass" data-image="images/railing-glass.jpg" data-link="railing-glass.html">
+            <img src="Images\Jai_Shree_Krishana.jpg">
+            <h3>Railing Glass</h3>
+            <p>Glass railing solutions</p>
+            <a href="railing-glass.html" class="add-btn">More Options</a>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="about"><br><br>
+        <h2>About Aayan Art Glass</h2>
+        <p>We are a family-owned business specializing in mirrors and art glass since 2015. Our products are sourced from trusted manufacturers and designed for quality, durability, and artistic elegance.</p>
+    </section>
+    
+    <section id="contact"><br><br>
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+    </section>
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>Aayan Art Glass</h3>
+                <p>Premium mirrors & artistic glass solutions for modern interiors.</p>
+            </div>
+            <div class="footer-box">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Contact</h4>
+                <p>📍 Delhi, India</p>
+                <p>📞 +91 9891922229</p>
+                <p>📧 aayanartglass@gmail.com</p>
+                <p>🕒 tue – Sun: 10:00 AM – 8:00 PM</p>
+                <p>🚚 Serving Delhi NCR</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p> © <span id="footerYear"></span> Aayan Art Glass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
