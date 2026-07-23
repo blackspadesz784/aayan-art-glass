@@ -472,54 +472,148 @@ nav a{
     cursor: pointer;
 }
 
-.pin-images{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    padding:20px;
+/* Pinterest Masonry Gallery Layout */
+.pin-images {
+    column-count: 4;
+    column-gap: 1.5rem;
+    padding: 2.5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.pin-container{
-    position:relative;
+@media (max-width: 1200px) {
+    .pin-images {
+        column-count: 3;
+        column-gap: 1.25rem;
+        padding: 2rem 1.5rem;
+    }
 }
 
-.pin-container img{
-    width:260px;
-    border-radius:18px;
-    display:block;
+@media (max-width: 768px) {
+    .pin-images {
+        column-count: 2;
+        column-gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
 }
 
-.save-btn{
-    position:absolute;
-    top:10px;
-    right:10px;
-    background:#e60023;
-    color:#fff;
-    border:none;
-    padding:6px 14px;
-    font-size:13px;
-    border-radius:20px;
-    cursor:pointer;
-    opacity:0;
-    transition:0.3s ease;
+@media (max-width: 480px) {
+    .pin-images {
+        column-count: 1;
+        column-gap: 0;
+        padding: 1rem;
+    }
 }
 
-.pin-container:hover .save-btn{
-    opacity:1;
-    transform:scale(1.05);
+.pin-container {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(35, 35, 35, 0.9), rgba(20, 20, 20, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
 }
 
-.save-btn:disabled{
-    background:#555;
-    cursor:default;
-    opacity:1;
+.pin-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.6);
 }
 
-.back-btn{
-    display:block;
-    color:#FFD700;
-    margin:20px;
-    text-decoration:none;
+.pin-container img {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px 16px 0 0;
+    transition: transform 0.4s ease;
+}
+
+.pin-container:hover img {
+    transform: scale(1.03);
+}
+
+.pin-info {
+    padding: 0.85rem 1.1rem;
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pin-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #f8f9fa;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.save-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(45deg, #e60023, #ff334b);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(230, 0, 35, 0.4);
+    z-index: 10;
+}
+
+.save-btn.saved {
+    background: linear-gradient(45deg, #28a745, #20c997);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+    opacity: 1;
+}
+
+.pin-container:hover .save-btn {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.save-btn:hover {
+    transform: scale(1.1) !important;
+}
+
+.save-btn:disabled {
+    background: #555;
+    cursor: default;
+    opacity: 1;
+}
+
+.back-btn {
+    display: inline-block;
+    color: #FFD700;
+    margin: 2rem 0 2rem 2rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(34, 34, 34, 0.8);
+    border: 1px solid #FFD700;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #FFD700;
+    color: #000;
+    transform: translateX(-5px);
 }
 
 .wishlist-wrapper{
